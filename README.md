@@ -8,6 +8,22 @@
 
 Скрипт: `git-backup.sh`
 
+## Обозначения
+
+В инструкции используются универсальные плейсхолдеры в угловых скобках:
+
+- `<project>` — имя конкретного репозитория или проекта без локального пути, например `my-service`
+- `<group>` — группа, namespace или владелец репозитория на Git-сервере, например `team/backend`
+- `<git-host>` — адрес Git-сервера, например `github.com`, `gitlab.company.local` или другой SSH-host
+- `<branch>` — имя ветки, например `main`, `dev`, `feature-x`
+
+Как читать примеры:
+
+- `git@<git-host>:<group>/<project>.git` — SSH-адрес удалённого репозитория
+- `/STORAGE/git/backup/<project>.git` — локальный bare mirror этого репозитория на сервере
+- `/STORAGE/git/backup/checkouts/<project>/<branch>` — локальная файловая копия конкретной ветки
+- `/STORAGE/git/backup/bundles/<project>-YYYYMMDD.bundle` — bundle-файл проекта за указанную дату
+
 ## Что получится на сервере
 
 После настройки структура будет такой:
